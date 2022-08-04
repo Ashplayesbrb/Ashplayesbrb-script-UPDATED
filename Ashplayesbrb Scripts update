@@ -1,0 +1,514 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local Farm = Instance.new("TextButton")
+local Small = Instance.new("TextButton")
+local CheckDW = Instance.new("TextButton")
+local EquipDW = Instance.new("TextButton")
+local EquipDB = Instance.new("TextButton")
+local SPS = Instance.new("TextButton")
+local FPS = Instance.new("TextButton")
+local Close = Instance.new("TextButton")
+local StrengthChecker = Instance.new("TextButton")
+local Reviz = Instance.new("TextButton")
+local ToggleNight = Instance.new("TextButton")
+local LockPlayer = Instance.new("TextButton")
+local AntiAFK = Instance.new("TextButton")
+local DeleteHud = Instance.new("TextButton")
+local TPToSafeZone = Instance.new("TextButton")
+local AntiHit = Instance.new("TextButton")
+local Open = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+Main.Name = "Main"
+Main.Parent = ScreenGui
+Main.BackgroundColor3 = Color3.fromRGB(142, 255, 255)
+Main.Position = UDim2.new(0.297139227, 0, 0.377008647, 0)
+Main.Size = UDim2.new(0, 624, 0, 390)
+Main.Visible = false
+Main.Active = true
+Main.Draggable = true
+
+TextLabel.Parent = Main
+TextLabel.BackgroundColor3 = Color3.fromRGB(161, 255, 20)
+TextLabel.Position = UDim2.new(0, 0, -0.00128205132, 0)
+TextLabel.Size = UDim2.new(0, 624, 0, 82)
+TextLabel.Font = Enum.Font.Creepster
+TextLabel.Text = "Ashplayesbrb Farm"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 35.000
+
+Farm.Name = "Farm"
+Farm.Parent = Main
+Farm.BackgroundColor3 = Color3.fromRGB(164, 255, 60)
+Farm.Position = UDim2.new(0, 0, 0.527768552, 0)
+Farm.Size = UDim2.new(0, 162, 0, 43)
+Farm.Font = Enum.Font.Creepster
+Farm.Text = "Farm"
+Farm.TextColor3 = Color3.fromRGB(0, 0, 0)
+Farm.TextSize = 35.000
+Farm.MouseButton1Click:Connect(function()
+	if Farm.Text == ("Farm") then
+		Farm.Text = ("Stop") else
+		Farm.Text =("Farm") 
+	end
+	while Farm.Text == ("Stop") do
+		wait(0.5)
+		for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+			if v:IsA("Tool") and v.Name == ("Double Weight") or v.Name == ("Dumbell") then
+				v:Activate()
+			end
+		end
+	end
+end)
+
+Small.Name = "Small"
+Small.Parent = Main
+Small.BackgroundColor3 = Color3.fromRGB(164, 255, 60)
+Small.Position = UDim2.new(0.715644658, 0, 0.384178907, 0)
+Small.Size = UDim2.new(0, 175, 0, 40)
+Small.Font = Enum.Font.Creepster
+Small.Text = "Small"
+Small.TextColor3 = Color3.fromRGB(0, 0, 0)
+Small.TextSize = 35.000
+Small.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/MMWEdGe2"))() 
+end)
+
+CheckDW.Name = "Check DW"
+CheckDW.Parent = Main
+CheckDW.BackgroundColor3 = Color3.fromRGB(164, 255, 60)
+CheckDW.Position = UDim2.new(-0.00159742904, 0, 0.683777809, 0)
+CheckDW.Size = UDim2.new(0, 162, 0, 39)
+CheckDW.Font = Enum.Font.Creepster
+CheckDW.Text = "Check DW"
+CheckDW.TextColor3 = Color3.fromRGB(0, 0, 0)
+CheckDW.TextSize = 35.000
+CheckDW.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/5eGDpNVq"))() 
+end)
+
+EquipDW.Name = "Equip DW"
+EquipDW.Parent = Main
+EquipDW.BackgroundColor3 = Color3.fromRGB(164, 255, 60)
+EquipDW.Position = UDim2.new(0.717242122, 0, 0.529807508, 0)
+EquipDW.Size = UDim2.new(0, 175, 0, 43)
+EquipDW.Font = Enum.Font.Creepster
+EquipDW.Text = "Equip DW"
+EquipDW.TextColor3 = Color3.fromRGB(0, 0, 0)
+EquipDW.TextSize = 35.000
+EquipDW.MouseButton1Click:Connect(function()
+	if EquipDW.Text == ("Equip DW") then
+		EquipDW.Text = ("DW Equipped") else
+		EquipDW.Text =("Equip DW") 
+	end
+	while EquipDW.Text == ("DW Equipped") do
+		wait(0.01)
+		for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+			if  v.Name == ("Double Weight")  then
+				v.Parent = game.Players.LocalPlayer.Character
+			end
+		end
+	end
+	wait()
+	for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+		if  v.Name == ("Double Weight")  then
+			v.Parent = game.Players.LocalPlayer.Backpack
+		end
+	end
+end)
+
+EquipDB.Name = "Equip DB"
+EquipDB.Parent = Main
+EquipDB.BackgroundColor3 = Color3.fromRGB(164, 255, 60)
+EquipDB.Position = UDim2.new(0, 0, 0.830060959, 0)
+EquipDB.Size = UDim2.new(0, 162, 0, 42)
+EquipDB.Font = Enum.Font.Creepster
+EquipDB.Text = "Equip DB"
+EquipDB.TextColor3 = Color3.fromRGB(0, 0, 0)
+EquipDB.TextSize = 35.000
+EquipDB.MouseButton1Click:Connect(function()
+	if EquipDB.Text == ("Equip DB") then
+		EquipDB.Text = ("DB Equipped") else
+		EquipDB.Text =("Equip DB") 
+	end
+	while EquipDB.Text == ("DB Equipped") do
+		wait(0.)
+		for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+			if  v.Name == ("Dumbell")  then
+				v.Parent = game.Players.LocalPlayer.Character
+			end
+		end
+	end
+	wait()
+	for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+		if  v.Name == ("DumBell")  then
+			v.Parent = game.Players.LocalPlayer.Backpack
+		end
+	end
+end)
+
+SPS.Name = "SPS"
+SPS.Parent = Main
+SPS.BackgroundColor3 = Color3.fromRGB(164, 255, 60)
+SPS.Position = UDim2.new(0.717242122, 0, 0.681629181, 0)
+SPS.Size = UDim2.new(0, 176, 0, 40)
+SPS.Font = Enum.Font.Creepster
+SPS.Text = "SPS"
+SPS.TextColor3 = Color3.fromRGB(0, 0, 0)
+SPS.TextSize = 35.000
+SPS.MouseButton1Down:connect(function()
+	loadstring(game:GetObjects("rbxassetid://8326985509")[1].Source)() 
+end)
+
+FPS.Name = "FPS"
+FPS.Parent = Main
+FPS.BackgroundColor3 = Color3.fromRGB(164, 255, 60)
+FPS.Position = UDim2.new(0.359430075, 0, 0.681358576, 0)
+FPS.Size = UDim2.new(0, 175, 0, 40)
+FPS.Font = Enum.Font.Creepster
+FPS.Text = "FPS"
+FPS.TextColor3 = Color3.fromRGB(0, 0, 0)
+FPS.TextSize = 35.000
+FPS.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/VSjtWEDe"))() 
+end)
+
+Close.Name = "Close"
+Close.Parent = Main
+Close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Close.Position = UDim2.new(0.948881626, 0, -0.00128204422, 0)
+Close.Size = UDim2.new(0, 31, 0, 35)
+Close.Font = Enum.Font.GothamBold
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close.TextScaled = true
+Close.TextSize = 14.000
+Close.TextWrapped = true
+
+StrengthChecker.Name = "Strength Checker"
+StrengthChecker.Parent = Main
+StrengthChecker.BackgroundColor3 = Color3.fromRGB(164, 255, 60)
+StrengthChecker.Position = UDim2.new(0.359430075, 0, 0.527243555, 0)
+StrengthChecker.Size = UDim2.new(0, 175, 0, 43)
+StrengthChecker.Font = Enum.Font.Creepster
+StrengthChecker.Text = "Strength Checker"
+StrengthChecker.TextColor3 = Color3.fromRGB(0, 0, 0)
+StrengthChecker.TextSize = 27.000
+StrengthChecker.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/sPnR6SiF"))() 
+end)
+
+Reviz.Name = "Reviz"
+Reviz.Parent = Main
+Reviz.BackgroundColor3 = Color3.fromRGB(164, 255, 60)
+Reviz.Position = UDim2.new(0.359430075, 0, 0.386300594, 0)
+Reviz.Size = UDim2.new(0, 175, 0, 39)
+Reviz.Font = Enum.Font.Creepster
+Reviz.Text = "Reviz"
+Reviz.TextColor3 = Color3.fromRGB(0, 0, 0)
+Reviz.TextSize = 27.000
+Reviz.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Ashplayesbrb/Reviz/main/Reziz",true))();
+end)
+
+
+ToggleNight.Name = "Toggle Night"
+ToggleNight.Parent = Main
+ToggleNight.BackgroundColor3 = Color3.fromRGB(164, 255, 60)
+ToggleNight.Position = UDim2.new(-0.000701464131, 0, 0.384178907, 0)
+ToggleNight.Size = UDim2.new(0, 162, 0, 40)
+ToggleNight.Font = Enum.Font.Creepster
+ToggleNight.Text = "Toggle Night"
+ToggleNight.TextColor3 = Color3.fromRGB(0, 0, 0)
+ToggleNight.TextSize = 30.000
+
+LockPlayer.Name = "Lock Player"
+LockPlayer.Parent = Main
+LockPlayer.BackgroundColor3 = Color3.fromRGB(164, 255, 60)
+LockPlayer.Position = UDim2.new(0.716346145, 0, 0.230060995, 0)
+LockPlayer.Size = UDim2.new(0, 175, 0, 49)
+LockPlayer.Font = Enum.Font.Creepster
+LockPlayer.Text = "Lock Player"
+LockPlayer.TextColor3 = Color3.fromRGB(0, 0, 0)
+LockPlayer.TextSize = 35.000
+LockPlayer.MouseButton1Down:connect(function()
+	Midnight:NewToggle("Equip", "Farm", function(state)
+		if state then
+			_G.Equip = true
+			while _G.Equip do
+				wait()
+				for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+					if v.Name == "Double Weight" then v:Activate()
+						v.Parent = game.Players.LocalPlayer.Character
+					end
+				end
+			end
+		else
+			_G.Equip = false
+			while _G.Equip do
+				wait()
+				for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+					if v.Name == "Double Weight" then v:Activate()
+						v.Parent = game.Players.LocalPlayer.Character
+					end
+				end
+			end
+		end
+	end)
+end)
+
+AntiAFK.Name = "Anti AFK"
+AntiAFK.Parent = Main
+AntiAFK.BackgroundColor3 = Color3.fromRGB(164, 255, 60)
+AntiAFK.Position = UDim2.new(0.358974367, 0, 0.230060995, 0)
+AntiAFK.Size = UDim2.new(0, 175, 0, 49)
+AntiAFK.Font = Enum.Font.Creepster
+AntiAFK.Text = "Anti AFK"
+AntiAFK.TextColor3 = Color3.fromRGB(0, 0, 0)
+AntiAFK.TextSize = 35.000
+AntiAFK.MouseButton1Down:connect(function()
+	wait(0.5)local ba=Instance.new("ScreenGui")
+	local ca=Instance.new("TextLabel")local da=Instance.new("Frame")
+	local _b=Instance.new("TextLabel")local ab=Instance.new("TextLabel")ba.Parent=game.CoreGui
+	ba.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;ca.Parent=ba;ca.Active=true
+	ca.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ca.Draggable=true
+	ca.Position=UDim2.new(0.698610067,0,0.098096624,0)ca.Size=UDim2.new(0,370,0,52)
+	ca.Font=Enum.Font.SourceSansSemibold;ca.Text="Anti AFK Script"ca.TextColor3=Color3.new(0,1,1)
+	ca.TextSize=22;da.Parent=ca
+	da.BackgroundColor3=Color3.new(0.196078,0.196078,0.196078)da.Position=UDim2.new(0,0,1.0192306,0)
+	da.Size=UDim2.new(0,370,0,107)_b.Parent=da
+	_b.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)_b.Position=UDim2.new(0,0,0.800455689,0)
+	_b.Size=UDim2.new(0,370,0,21)_b.Font=Enum.Font.Arial;_b.Text="made by ur mom "
+	_b.TextColor3=Color3.new(0,1,1)_b.TextSize=20;ab.Parent=da
+	ab.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ab.Position=UDim2.new(0,0,0.158377,0)
+	ab.Size=UDim2.new(0,370,0,44)ab.Font=Enum.Font.ArialBold;ab.Text="Status: Active"
+	ab.TextColor3=Color3.new(0,1,1)ab.TextSize=20;local bb=game:service'VirtualUser'
+	game:service'Players'.LocalPlayer.Idled:connect(function()
+		bb:CaptureController()bb:ClickButton2(Vector2.new())
+		ab.Text="Roblox tried to kick u but i kicked him instead"wait(2)ab.Text="Status : Active"end)
+end)
+
+DeleteHud.Name = "Delete Hud"
+DeleteHud.Parent = Main
+DeleteHud.BackgroundColor3 = Color3.fromRGB(164, 255, 60)
+DeleteHud.Position = UDim2.new(-0.000701464131, 0, 0.227768645, 0)
+DeleteHud.Size = UDim2.new(0, 162, 0, 49)
+DeleteHud.Font = Enum.Font.Creepster
+DeleteHud.Text = "Delete Hud"
+DeleteHud.TextColor3 = Color3.fromRGB(0, 0, 0)
+DeleteHud.TextSize = 35.000
+DeleteHud.MouseButton1Down:connect(function()
+	DeleteHud.MouseButton1Click:Connect(function()
+		game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.ProteinBuy:Destroy()
+		game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.OpenShop:Destroy()
+		game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.OpenReb:Destroy()
+		game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.ImageLabel:Destroy()
+		game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.OpenPack:Destroy()
+		game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.PopSound:Destroy()
+		game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.BlackMarket:Destroy()
+		game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.LiftRemind:Destroy()
+		game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.MuscleGain:Destroy()
+		game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.RebFrame:Destroy()
+		game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.ShopFrame:Destroy()
+		game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.OpenSkins:Destroy()
+		game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.Bar:Destroy()
+		game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.StrengthHolder.ImageLabel:Destroy()
+		game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.StrengthHolder.TextLabel.TextLabel:Destroy()
+		game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.CashHolder:Destroy()
+		game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.CashButton:Destroy()
+		game:GetService("Players").LocalPlayer.PlayerGui.HUD.Frame.RumbleHolder:Destroy()
+	end)
+end)
+
+TPToSafeZone.Name = "TP To Safe Zone"
+TPToSafeZone.Parent = Main
+TPToSafeZone.BackgroundColor3 = Color3.fromRGB(164, 255, 60)
+TPToSafeZone.Position = UDim2.new(0.717242122, 0, 0.835059822, 0)
+TPToSafeZone.Size = UDim2.new(0, 173, 0, 39)
+TPToSafeZone.Font = Enum.Font.Creepster
+TPToSafeZone.Text = "TP To Safe Zone"
+TPToSafeZone.TextColor3 = Color3.fromRGB(0, 0, 0)
+TPToSafeZone.TextSize = 29.000
+TPToSafeZone.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1935.33301, 146.006165, -5322.47803, 0.99905473, -1.51493107e-09, -0.0434705131, 3.37854189e-11, 1, -3.40731567e-08, 0.0434705131, 3.40394806e-08, 0.99905473)
+end)
+
+AntiHit.Name = "Anti Hit"
+AntiHit.Parent = Main
+AntiHit.BackgroundColor3 = Color3.fromRGB(164, 255, 60)
+AntiHit.Position = UDim2.new(0.359430075, 0, 0.824932694, 0)
+AntiHit.Size = UDim2.new(0, 174, 0, 42)
+AntiHit.Font = Enum.Font.Creepster
+AntiHit.Text = "Anti Hit"
+AntiHit.TextColor3 = Color3.fromRGB(0, 0, 0)
+AntiHit.TextSize = 35.000
+AntiHit.MouseButton1Down:connect(function()
+	for i = 1,1 do 
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Made By Newj/Alan",
+			Text = "Fuck Yall Skids",
+			Icon = "",
+			Duration = 1,
+		})
+	end
+
+	local InsertedObjects = Instance.new("ScreenGui")
+	local Gradient = Instance.new("Frame")
+	local UIGradient = Instance.new("UIGradient")
+	local UICorner = Instance.new("UICorner")
+	local LoopDetector = Instance.new("TextLabel")
+	local player = Instance.new("TextLabel")
+
+	--Properties:
+
+	InsertedObjects.ResetOnSpawn = false
+	InsertedObjects.Name = "InsertedObjects"
+	InsertedObjects.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+	Gradient.Name = "Gradient"
+	Gradient.Parent = InsertedObjects
+	Gradient.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Gradient.BorderColor3 = Color3.fromRGB(27, 42, 53)
+	Gradient.BorderSizePixel = 0
+	Gradient.Position = UDim2.new(0.5, 0, 0.524539888, 0)
+	Gradient.Size = UDim2.new(0, 228, 0, 180)
+
+	UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(137, 0, 254)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(223, 0, 255))}
+	UIGradient.Parent = Gradient
+
+	UICorner.CornerRadius = UDim.new(0, 4)
+	UICorner.Parent = Gradient
+
+	LoopDetector.Name = "Loop Detector"
+	LoopDetector.Parent = Gradient
+	LoopDetector.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	LoopDetector.BackgroundTransparency = 1.000
+	LoopDetector.Size = UDim2.new(0, 228, 0, 50)
+	LoopDetector.Font = Enum.Font.SourceSans
+	LoopDetector.Text = "Loop Detector"
+	LoopDetector.TextColor3 = Color3.fromRGB(0, 0, 0)
+	LoopDetector.TextSize = 24.000
+
+	player.Name = "player"
+	player.Parent = Gradient
+	player.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	player.BackgroundTransparency = 1.000
+	player.Position = UDim2.new(0, 0, 0.416666657, 0)
+	player.Size = UDim2.new(0, 228, 0, 50)
+	player.Font = Enum.Font.SourceSans
+	player.Text = ""
+	player.TextColor3 = Color3.fromRGB(0, 0, 0)
+	player.TextSize = 16.000
+
+	-- Scripts:
+
+	local function CYBH_fake_script() -- Gradient.LocalScript 
+		local script = Instance.new('LocalScript', Gradient)
+
+		local UIS = game:GetService("UserInputService")
+		function dragify(Frame)
+			dragToggle = nil
+			local dragSpeed = 0
+			dragInput = nil
+			dragStart = nil
+			local dragPos = nil
+			function updateInput(input)
+				local Delta = input.Position - dragStart
+				local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+				game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), {Position = Position}):Play()
+			end
+			Frame.InputBegan:Connect(function(input)
+				if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+					dragToggle = true
+					dragStart = input.Position
+					startPos = Frame.Position
+					input.Changed:Connect(function()
+						if input.UserInputState == Enum.UserInputState.End then
+							dragToggle = false
+						end
+					end)
+				end
+			end)
+			Frame.InputChanged:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+					dragInput = input
+				end
+			end)
+			game:GetService("UserInputService").InputChanged:Connect(function(input)
+				if input == dragInput and dragToggle then
+					updateInput(input)
+				end
+			end)
+		end
+
+		dragify(script.Parent)
+	end
+	coroutine.wrap(CYBH_fake_script)()
+
+	coroutine.wrap(function()
+		game:GetService("RunService").RenderStepped:connect(function()
+			pcall(function()
+				if game.Players.LocalPlayer.Character.Humanoid:FindFirstChild("creator") then
+					player.Text = tostring(game.Players.LocalPlayer.Character.Humanoid.creator.Value).." Is Looping U"
+				elseif not game.Players.LocalPlayer.Character.Humanoid:FindFirstChild("creator") then
+					player.Text = ''
+				end
+			end)
+		end)
+	end)()
+
+	coroutine.wrap(function()
+		game:GetService("RunService").RenderStepped:connect(function()
+			if player.Text ~= '' then
+				game.ReplicatedStorage.Remotes.Human_Punch:FireServer(game.Players.LocalPlayer.Character.RightHand, "RightPunch", workspace[tostring(game.Players.LocalPlayer.Character.Humanoid:FindFirstChild("creator").Value)].UpperTorso,5,true,"RightPunch",game.Players.LocalPlayer.Backpack.Boxing.Handle.Hit,5)
+				game.ReplicatedStorage.Remotes.Human_Punch:FireServer(game.Players.LocalPlayer.Character.LeftHand, "LeftPunch", workspace[tostring(game.Players.LocalPlayer.Character.Humanoid:FindFirstChild("creator").Value)].UpperTorso,5,true,"LeftPunch",game.Players.LocalPlayer.Backpack.Boxing.Handle.Hit,5)
+			else
+			end
+		end)
+	end)()
+end)
+
+Open.Name = "Open"
+Open.Parent = ScreenGui
+Open.BackgroundColor3 = Color3.fromRGB(170, 255, 0)
+Open.Position = UDim2.new(0, 0, 0.358467251, 0)
+Open.Size = UDim2.new(0, 118, 0, 34)
+Open.Font = Enum.Font.SourceSans
+Open.Text = "Open"
+Open.TextColor3 = Color3.fromRGB(0, 0, 0)
+Open.TextSize = 14.000
+
+-- Scripts:
+
+local function NSZHJ_fake_script() -- Close.LocalScript 
+	local script = Instance.new('LocalScript', Close)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+	
+end
+coroutine.wrap(NSZHJ_fake_script)()
+local function LTTAC_fake_script() -- Open.LocalScript 
+	local script = Instance.new('LocalScript', Open)
+
+	local frame = script.Parent.Parent.Main
+	local open = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if frame.Visible == false then
+			frame.Visible = true
+		end
+		
+	end)
+end
+coroutine.wrap(LTTAC_fake_script)()
